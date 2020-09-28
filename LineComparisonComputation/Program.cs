@@ -29,11 +29,13 @@ namespace LineComparison
                 lineCount++;
             }
 
-            if (length[0].Equals(length[1]))
-                Console.WriteLine("Both lines are equal");
+            int value = length[0].CompareTo(length[1]);
+            if (value < 0)
+                Console.WriteLine("Line 1 is smaller than Line 2");
+            else if (value == 0)
+                Console.WriteLine("Both the lines are equal");
             else
-                Console.WriteLine("Lines are not equal");
-
+                Console.WriteLine("Line 1 is greater than Line 2");
         }
     }
 }
